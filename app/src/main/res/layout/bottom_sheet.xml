@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="bottomSheetFragment"
+            type="com.amaromerovic.todoister.ui.BottomSheetFragment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF">
+
+
+        <EditText
+            android:id="@+id/todoText"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:autofillHints=""
+            android:background="@drawable/underline"
+            android:cursorVisible="true"
+            android:ems="10"
+            android:fontFamily="@font/roboto"
+            android:hint="@string/todoItem"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:textColor="#000000"
+            android:textColorHighlight="#202020"
+            android:textColorHint="#202020"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/calendarButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:contentDescription="@string/calendar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/timeButton"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/todoText"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/ic_baseline_calendar_month_24"
+            app:tint="#CA0000" />
+
+        <ImageView
+            android:id="@+id/timeButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:contentDescription="@string/calendar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/priorButton"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toEndOf="@+id/calendarButton"
+            app:layout_constraintTop_toBottomOf="@+id/todoText"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/ic_baseline_access_time_24"
+            app:tint="#CA0000" />
+
+        <ImageView
+            android:id="@+id/saveButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="24dp"
+            android:contentDescription="@string/saveItem"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/priorButton"
+            app:layout_constraintTop_toBottomOf="@+id/todoText"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/ic_baseline_file_upload_24"
+            app:tint="#F44336" />
+
+        <ImageView
+            android:id="@+id/priorButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:contentDescription="@string/priority"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/saveButton"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/timeButton"
+            app:layout_constraintTop_toBottomOf="@+id/todoText"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/ic_baseline_crisis_alert_24"
+            app:tint="#F44336" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/todayChip"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="64dp"
+            android:text="@string/todayChip"
+            android:textAppearance="@style/chipText"
+            android:textColor="#000000"
+            app:chipBackgroundColor="#CEFFFFFF"
+            app:chipIcon="@drawable/ic_baseline_today_24"
+            app:chipIconTint="#F44336"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dueTextView"
+            tools:ignore="TextContrastCheck" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/tomorrowChip"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="64dp"
+            android:text="@string/tomorrowChip"
+            android:textAppearance="@style/chipText"
+            android:textColor="#000000"
+            app:chipBackgroundColor="#CEFFFFFF"
+            app:chipIcon="@drawable/ic_baseline_wb_sunny_24"
+            app:chipIconTint="#F44336"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/todayChip"
+            tools:ignore="TextContrastCheck" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/nextWeekChip"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="64dp"
+            android:text="@string/nextWeekChip"
+            android:textAppearance="@style/chipText"
+            android:textColor="#000000"
+            app:chipBackgroundColor="#CEFFFFFF"
+            app:chipIcon="@drawable/ic_baseline_next_week_24"
+            app:chipIconTint="#F44336"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tomorrowChip"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/dueTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="96dp"
+            android:fontFamily="@font/roboto_black"
+            android:text="@string/dueDate"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/priorButton" />
+
+        <CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="-8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="#CEFFFFFF"
+            android:backgroundTint="#CEFFFFFF"
+            android:dateTextAppearance="@style/CalendarDayTextStyle"
+            android:padding="20dp"
+            android:theme="@style/CalenderViewCustom"
+            android:weekDayTextAppearance="@style/CalendarMonthYearDayNameTextStyle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nextWeekChip"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="24dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/priorButton"
+            app:layout_constraintVertical_bias="0.0">
+
+            <RadioButton
+                android:id="@+id/highPrioRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@drawable/radio_button_shape_left"
+                android:buttonTint="#000000"
+                android:checked="false"
+                android:fontFamily="@font/roboto"
+                android:text="@string/highPrio"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+            <RadioButton
+                android:id="@+id/mediumPrioRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#388E3C"
+                android:buttonTint="#000000"
+                android:checked="false"
+                android:fontFamily="@font/roboto"
+                android:text="@string/mediumPrio"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+            <RadioButton
+                android:id="@+id/lowPrioRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radio_button_shape_right"
+                android:buttonTint="#000000"
+                android:checked="false"
+                android:fontFamily="@font/roboto"
+                android:text="@string/lowPrio"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </RadioGroup>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/calendarGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:foregroundGravity="center"
+            android:visibility="gone"
+            app:constraint_referenced_ids="dueTextView,todayChip,tomorrowChip,nextWeekChip,calendarView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

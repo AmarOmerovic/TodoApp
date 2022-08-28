@@ -1,0 +1,22 @@
+<resources>
+    <string name="appName">Todoister</string>
+    <string name="aboutText">Todoist Clone App - by Amar - version 1.0</string>
+    <string name="todoItem">Todo item:</string>
+    <string name="lowPrio">Low</string>
+    <string name="mediumPrio">Medium</string>
+    <string name="highPrio">High</string>
+    <string name="dueDate">Due Date</string>
+    <string name="tomorrowChip">Tomorrow</string>
+    <string name="todayChip">Today</string>
+    <string name="nextWeekChip">Next Week</string>
+    <string name="calendar">calendar</string>
+    <string name="priority">priority</string>
+    <string name="saveItem">saveItem</string>
+    <string name="addItemText">addItem</string>
+    <string name="today">Today</string>
+    <string name="about">About</string>
+    <string name="done">Done</string>
+    <string name="time">time</string>
+    <string name="select_all">Select all</string>
+    <string name="select">SELECT ALL</string>
+</resources>

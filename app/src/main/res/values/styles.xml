@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CalenderViewCustom" parent="Theme.AppCompat">
+        <item name="colorPrimary">#F44336</item>
+        <item name="colorAccent">#F44336</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:textColorSecondary">@color/black</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/roboto_black</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="CalendarMonthYearDayNameTextStyle" parent="android:TextAppearance.DeviceDefault">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/roboto_black</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="CalendarDayTextStyle" parent="android:TextAppearance.DeviceDefault">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="chipText" parent="TextAppearance.MaterialComponents.Chip">
+        <item name="android:textSize">15.5sp</item>
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+
+
+    <style name="floatingButton" parent="ShapeAppearanceOverlay.Material3.FloatingActionButton">
+        <item name="colorSecondary">#F44336</item>
+        <item name="colorOnSecondary">@color/white</item>
+    </style>
+
+
+</resources>
